@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tw.com.msig</groupId>
-	<artifactId>msig_java_training_spring_2</artifactId>
+	<artifactId>msig_java_training</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>msig_java_training_spring_2</name>
-	<description>msig_java_training_spring_2</description>
+	<name>msig_java_training</name>
+	<description>msig java training</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
