@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>MSIG</title>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+  </head>
+
+  <div class="row">
+    <div class="col-xs-2">
+      <input type="text" class="form-control">
+      <p id="prompt" class="text-primary" hidden>type something</p>
+    </div>
+    <input class="btn btn-default" type="button" value="Click me">
+  </div>
+</html>
+
+<script>
+
+  // http://api.jquery.com/category/events/
+  
+  // .ready()
+  // .val()
+  // .click() .dblclick()
+  // .focus()
+  // .mouseover() .mouseout()
+  // .hide() .show()
+
+  $(document).ready(function() {
+    console.log('docuemnt ready...');
+
+    var $button = $(".btn");
+    var $input = $(".form-control");
+    
+    $button.click(function() {
+      console.log($input.val());
+    }).mouseover(function() {
+      $("#prompt").show();
+    }).mouseout(function() {
+      $("#prompt").hide();
+    }).dblclick(function() {
+      $input.focus();
+    });
+
+  });
+
+</script>

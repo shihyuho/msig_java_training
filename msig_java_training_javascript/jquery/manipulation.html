@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+      <title>MSIG</title>
+      <script src="lib/jquery-3.2.1.min.js"></script>
+      <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+  </head>
+
+  <div class="col-xs-6">
+    <table id="myTable" class="table table-bordered">
+      <thead>
+        <th><input class="btn btn-default btn-xs" type="button" value="+"></th>
+        <th>Name</th>
+        <th>Age</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+</html>
+
+<script>
+
+  // https://api.jquery.com/category/manipulation/
+  
+  // this 
+  // .parent()
+  // .html()
+  // .attr() .removeAttr()
+  // .append()
+  // .clone()
+
+  $(document).ready(function() {
+    var _tr = $("<tr></tr>");
+    var _td = $("<td></td>");
+    var _minus = $('<input class="btn btn-default btn-xs" type="button" value="-">');
+
+    $("#myTable > thead input").click(function() {
+      var $tr = _tr.clone();
+      var $minus = _minus.clone().click(function() {
+        $(this).parent().parent().remove();
+      });
+
+      $tr.append(_td.clone().append($minus));
+      $tr.append(_td.clone().html("my name"));
+      $tr.append(_td.clone().html(parseInt(Math.random() * 100)));
+
+      $("tbody").append($tr);
+    });
+  });
+
+</script>

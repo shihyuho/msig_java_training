@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>MSIG</title>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+  </head>
+
+  <div class="col-xs-6">
+    <table id="myTable" class="table table-bordered">
+      <thead>
+        <tr id="tr1">
+          <th id="th1">Apple</th>
+          <th id="th2">Andriod</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="tr2">
+          <td id="td1">iPhone 6S</td>
+          <td id="td2">HTC One X10</td>
+        </tr>
+        <tr id="tr3">
+          <td id="td3">iPhone 6S Plus</td>
+          <td id="td4">HTC U11</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</html>
+
+<script>
+
+  // http://api.jquery.com/category/selectors/
+  
+  // * all
+  // tag tag
+  // # id
+  // = equals
+  // != not equals
+  // ^= begining
+  // $= ending
+  // *= containing
+  // . class
+  // > child
+  // [...][...] multiple constraint
+
+  $("tr[id!='tr1']").each(function(i, val) {
+    console.log(val);
+  });
+
+  $(".table-bordered").each(function(i, val) {
+    console.log(val);
+  });
+
+  $(".table-bordered > thead").each(function(i, val) {
+    console.log(val);
+  });
+
+  $(".table-bordered > thead th").each(function(i, val) {
+    console.log(val);
+  });
+
+</script>
